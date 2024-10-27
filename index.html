@@ -1,0 +1,77 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <title>Quizizzz</title>
+</head>
+<body>
+    <section class="section-1">
+        <div class="header-btn">
+            <button id="volume">Music</button>
+            <button style="display: none" class="btn-s volume"><i class="fas fa-volume-up"></i></button>
+            <button class="btn-n volume"><i class="fas fa-volume-mute"></i></button>
+        </div>
+        <div class="sky">
+            <div class="moon"></div>
+            <div class="stars"></div>
+        </div>
+        <div class="start-screen">
+            <audio id="background-music" loop>
+                <source src="quiz-music/Labbayk_-_Allahu_feat_Yousuf_Coskun_74579403.mp3" type="audio/mpeg" />
+                <source src="quiz-music/Labbayk_-_Allahu_feat_Yousuf_Coskun_74579403.mp3" type="audio/ogg" />
+                Your browser does not support the audio element.
+            </audio>
+            <h1>Islam Quizz <i class="fas fa-moon"></i>
+            </h1>
+            <input id="input-name" type="text" placeholder="Write your name" />
+            <button class="btn start" id="start-button">Start</button>
+            <button class="btn rules" id="rules-button">Rules</button>
+        </div>
+        <div class="ruless hidden">
+            <h1>Welcome to This Islam Quizz Game</h1>
+            <div class="rules-screen">
+                <h2>Game Rules</h2>
+                <p><span>Objective:</span><br>Answer all quiz questions correctly by choosing the right option from four choices.</p>
+                <p><span>Question Structure:</span><br>Each question has four answer options, with only one correct answer. Choose the answer you think is correct.</p>
+                <p><span>Timer:</span><br>You have 10 seconds to answer each question. If time runs out, the question will be marked as incorrect.</p>
+                <p><span>Music:</span><br>Background music can be toggled on or off using the sound button at the top. Music is optional and doesn’t affect gameplay.</p>
+                <p><span>Navigation:</span><br>After selecting an answer, the game will automatically move to the next question.</p>
+            </div>
+            <button class="btn" id="back-button">Back</button>
+        </div>
+    </section>
+    <section class="section-2 hidden">
+      <h1>Quiz Question</h1>
+      <p id="questions"></p>
+      <div class="options">
+          <button class="btn option" id="option1"></button>
+          <button class="btn option" id="option2"></button>
+          <button class="btn option" id="option3"></button>
+          <button class="btn option" id="option4"></button>
+      </div>
+      <p id="timer">Time left: 10 seconds</p> <!-- Элемент для таймера -->
+      <p id="total-result" class="hidden">Total correct answers: 0</p> <!-- Элемент для отображения общего результата -->
+  </section>
+  <section class="section-3">
+      <h1 id="name-member">Member: </h1>
+      <span id="total"></span>
+  </section>
+  
+<section class="section-4 hidden">
+  <h1 id="final-score">Quiz Finished!</h1>
+  <p id="final-result">Total correct answers: 0</p>
+  <button class="btn" id="finish-button">Finish</button>
+</section>
+
+
+  
+    
+  <script src="script.js"></script>
+  <script src="quiz.js"></script> <!-- Подключите скрипт перед закрывающим тегом body -->
+</body>
+</html>
